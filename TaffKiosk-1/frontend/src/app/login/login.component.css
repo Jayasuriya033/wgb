@@ -1,0 +1,42 @@
+.login-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+ background-size: cover; background-image: url('https://png.pngtree.com/background/20210710/original/pngtree-gourmet-japanese-restaurant-sushi-creative-simple-business-poster-design-picture-image_1016307.jpg');
+  padding-left: 10px;
+}
+
+.login-card {
+  max-width: 400px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(197, 188, 188, 0.1);
+  background-color: rgba(213, 203, 214, 0.9);
+  border-radius: 8px;
+}
+
+.full-width {
+  width: 100%;
+}
+
+.centered {
+  text-align: center;
+}
+
+.mat-form-field {
+  margin-bottom: 15px;
+}
+
+.signup-link {
+  text-align: center;
+  margin-top: 15px;
+}
+
+.signup-link a {
+  color: #1565b6;
+  text-decoration: none;
+}
+
+.signup-link a:hover {
+  text-decoration: underline;
+}

@@ -1,0 +1,34 @@
+<div class="account-page">
+  <div class="lets-order">
+    <h2 class="top-text">LET'S ORDER FOR DELIVERY, PICK UP, OR DINE-IN</h2>
+    <button class="start-order-button">Start Order</button>
+  </div>
+  <div class="margin-container">
+    <div class="sidebar">
+      <h3>Welcome <br> Wild Game Butcher!</h3>
+      
+      <ul *ngIf=" roleId === '1'|| roleId === '3'" class="sidebar-menu">
+        <li><a routerLink="/signup"> <i class="fa-solid fa-user-plus"></i> Add Employee</a></li>
+        <li><a><i class="fa-solid fa-store"></i> Add Branch</a></li>
+        <li><a><i class="fa-solid fa-gauge"></i> DashBoard</a></li>
+        <li><a><i class="fa-solid fa-notes-medical"></i> Sales Details</a></li>
+        <li><a><i class="fa-regular fa-address-book"></i> Addresses</a></li>
+        <li><a><i class="fa-solid fa-gear"></i> Account Settings</a></li>
+        <li><a (click)="logoutService.logout()"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a></li>
+      </ul>
+    
+      <ul *ngIf="roleId !== '1' && roleId !== '3'" class="sidebar-menu">
+        <li><a> <i class="fa-solid fa-user-plus"></i> Work Detail</a></li>
+        <li><a><i class="fa-solid fa-notes-medical"></i> Salary History</a></li>
+        <li><a><i class="fa-regular fa-address-book"></i> Addresses</a></li>
+        <li><a><i class="fa-solid fa-gear"></i> Account Settings</a></li>
+        <li><a  (click)="logoutService.logout()"><i class="fa-solid fa-right-from-bracket"></i> Sign Out</a></li>
+      </ul>
+    </div>
+
+    <!-- <div class="main-content">
+      <h1>Account Page</h1>
+      <p>Welcome to your account page! Here you can manage your Account.</p>
+    </div> -->
+  </div>
+</div>

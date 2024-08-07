@@ -1,0 +1,16 @@
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+body{
+    
+}
+
+html, body { height: 100%; }
+body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.message {
+    background-color: rgb(255, 255, 255) !important;
+    color: rgb(255, 0, 0) !important;
+  }
+  

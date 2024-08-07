@@ -1,0 +1,29 @@
+.submit-page {
+  height: 100vh;
+  background-image: url('https://png.pngtree.com/background/20210710/original/pngtree-gourmet-japanese-restaurant-sushi-creative-simple-business-poster-design-picture-image_1016307.jpg');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px;
+  box-sizing: border-box;
+}
+
+.submit-card {
+  width: 100%;
+  max-width: 500px;
+  background: rgba(255, 255, 255, 0.9); 
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.mat-card-title {
+  text-align: center;
+}
+
+.full-width {
+  width: 100%;
+}

@@ -1,0 +1,32 @@
+
+<app-navbar></app-navbar>
+<table>
+    <thead>
+        <tr>
+            <th>First Name</th>
+            <th>Last Name</th>
+            <th>DOB</th>
+            <th>Email</th>
+            <th>Phone No</th>
+            <th>Location</th>
+            <th>Username</th>
+            <!-- <th>Password</th> --> <!-- Consider removing this field -->
+            <th>Role ID</th>
+            <th>Created By</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let employee of employees">
+            <td>{{ employee.firstName }}</td>
+            <td>{{ employee.lastName }}</td>
+            <td>{{ employee.dob | date }}</td>
+            <td>{{ employee.email }}</td>
+            <td>{{ employee.phoneNo }}</td>
+            <td>{{ employee.location }}</td>
+            <td>{{ employee.username }}</td>
+            <!-- <td>{{ employee.password }}</td> --> <!-- Consider removing this field -->
+            <td>{{ employee.roleId }}</td>
+            <td>{{ employee.createdBy }}</td>
+        </tr>
+    </tbody>
+</table>

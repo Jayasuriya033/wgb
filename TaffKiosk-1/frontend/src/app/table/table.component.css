@@ -1,0 +1,22 @@
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+    background-image: url('https://pngtree.com/freebackground/vector-illustration-of-a-restaurant-menu-design-with-food-and-drinks-showcasing-textured-paper-background_15276281.html');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    border: 1px solid black;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 8px;
+    text-align: left;
+    background-color: rgba(255, 255, 255, 0.8);
+}
+
+th {
+    background-color: rgba(141, 136, 136, 0.9); 
+    color: #441010;
+}

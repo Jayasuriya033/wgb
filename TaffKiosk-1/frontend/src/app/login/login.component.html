@@ -1,0 +1,30 @@
+<div class="login-container">
+  <mat-card class="login-card">
+    <mat-card-title class="centered" style="margin-bottom: 20px;">WGB Login</mat-card-title>
+    <p *ngIf="error">{{ error }}</p>
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()">
+
+      <mat-form-field class="full-width">
+        <mat-label>Username</mat-label>
+        <input matInput id="username" [(ngModel)]="userName" formControlName="username" placeholder="Username">
+      </mat-form-field>
+
+      <mat-form-field class="full-width">
+        <mat-label>Password</mat-label>
+        <input matInput type="password" formControlName="password" required>
+        <mat-error *ngIf="loginForm.get('password')?.invalid">Password is required</mat-error>
+      </mat-form-field>
+
+      <div class="forgot-password-link">
+        <a routerLink="/forgot-password" (click)="setUsername()">Forgot Password?</a>
+      </div> <br>
+
+     
+      <button mat-raised-button color="primary" type="submit" [disabled]="loginForm.invalid" class="full-width">Login</button>
+    </form>
+    <!-- <p class="signup-link">Don't have an account? <a routerLink="/signup">Go to signup page</a></p> -->
+  </mat-card>
+</div>
+
+
+

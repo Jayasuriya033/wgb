@@ -1,0 +1,73 @@
+<body>
+    
+  <div class="signup-container">
+    <h2 class="form-title">Sign Up Form</h2>
+    <form [formGroup]="signupForm" (ngSubmit)="onSubmit()">
+      <mat-form-field class="full-width">
+        <mat-label>First Name</mat-label>
+        <input matInput id="firstName" formControlName="firstName" placeholder="First Name">
+      </mat-form-field>
+  
+      <mat-form-field class="full-width">
+        <mat-label>Last Name</mat-label>
+        <input matInput id="lastName" formControlName="lastName" placeholder="Last Name">
+      </mat-form-field>
+ 
+       
+  
+      <mat-form-field class="full-width">
+        <mat-label>Date of Birth</mat-label>
+        <input matInput id="dob" formControlName="dob" [matDatepicker]="picker" [max]="maxDate" placeholder="Date of Birth">
+        <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+        <mat-datepicker #picker></mat-datepicker>
+      </mat-form-field>
+  
+      <mat-form-field class="full-width">
+        <mat-label>Email</mat-label>
+        <input matInput id="email" formControlName="email" placeholder="Email" type="email">
+      </mat-form-field>
+  
+      <div class="form-group-inline">
+        <mat-form-field class="half-width">
+          <mat-label>Country Code</mat-label>
+          <mat-select id="countryCode" formControlName="countryCode">
+            <mat-option *ngFor="let code of countryCodes" [value]="code.code">
+              {{ code.country }} ({{ code.code }})
+            </mat-option>
+          </mat-select>
+        </mat-form-field>
+        
+
+        <mat-form-field class="half-width">
+          <mat-label>Phone Number</mat-label>
+          <input matInput id="phoneNo" formControlName="phoneNo" placeholder="Phone Number">
+        </mat-form-field>
+        
+       
+      </div>
+  
+      <mat-form-field class="full-width">
+        <mat-label>Location</mat-label>
+        <input matInput id="location" formControlName="location" placeholder="Location">
+      </mat-form-field>
+  
+      <mat-form-field class="full-width">
+        <mat-label>Role</mat-label>
+        <mat-select id="roleId" formControlName="roleId">
+          <mat-option value="1">Super Admin</mat-option>
+          <mat-option value="2">Admin</mat-option>
+          <mat-option value="3">Manager</mat-option>
+          <mat-option value="4">Employee</mat-option>
+        </mat-select>
+      </mat-form-field>
+  
+      <button mat-raised-button color="primary" type="submit" [disabled]="!signupForm.valid">Sign Up</button>
+
+      <p class="loginForm">Alredy u have an account? <a routerLink="/">Go to loginForm</a></p>
+
+    </form>
+  </div>
+
+  
+
+</body>
